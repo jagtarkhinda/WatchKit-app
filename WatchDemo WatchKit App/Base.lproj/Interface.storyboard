@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="35" alignment="left" text="This is my Watch" id="dAX-Rz-fIo"/>
+                        <button width="1" alignment="left" title="Button" id="syz-TI-3kO">
+                            <connections>
+                                <action selector="watchButton" destination="AgC-eL-Hgc" id="Ilg-Qc-oQ4"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="53" alignment="left" text="Label 2" id="lLn-0a-e5t"/>
+                        <button width="1" alignment="left" title="Button" id="Gru-9p-KND">
+                            <connections>
+                                <segue destination="jhF-oc-ix8" kind="push" id="b5z-9c-FaY"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="WLabel1" destination="dAX-Rz-fIo" id="5QJ-OH-FLC"/>
+                        <outlet property="WLabel2" destination="lLn-0a-e5t" id="68n-rA-dwV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-51" y="19"/>
+        </scene>
+        <!--Screen2 Interface Controller-->
+        <scene sceneID="3qQ-WK-8gK">
+            <objects>
+                <controller id="jhF-oc-ix8" customClass="Screen2InterfaceController" customModule="WatchDemo_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="-16"/>
+        </scene>
+    </scenes>
+</document>
